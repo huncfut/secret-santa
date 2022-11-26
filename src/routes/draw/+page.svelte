@@ -2,11 +2,12 @@
   import MemberCard from "$lib/components/MemberCard.svelte";
 
   // State
-  let errors = {
-    name: true,
-    key: false,
+  let badSubmit = false
+  $: errors = {
+    name: badSubmit && !data.name,
+    key: badSubmit && !data.key
   }
-  let newMember: MemberData = {
+  let data: MemberData = {
     name: "",
     key: ""
   }
@@ -26,7 +27,12 @@
 
   // Form stuff
   const addMember = (e: SubmitEvent) => {
-    newMember.name !== "" && newMember.key !== "" && console.log(newMember)
+    // Error Check
+    badSubmit = !data.name || !data.key
+    if(badSubmit) return
+
+    party = [...party, data]
+    data = { name: "", key: "" }
   }
 </script>
 
@@ -39,7 +45,7 @@
       <input type="text"
         name="name"
         class:error={errors.name}
-        bind:value={newMember.name}
+        bind:value={data.name}
         />
     </label>
     <label>
@@ -47,7 +53,7 @@
       <input type="text"
         name="key"
         class:error={errors.key}
-        bind:value={newMember.key}
+        bind:value={data.key}
         />
     </label>
     <div>
@@ -120,7 +126,6 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    
   }
 
 </style>
