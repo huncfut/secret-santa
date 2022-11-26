@@ -1,5 +1,10 @@
-<section class="container">
-  <h2>Welcome to secret santa!</h2>
+<script>
+    import PH from "$lib/components/PageHeading.svelte";
+    import Section from "$lib/components/Section.svelte";
+</script>
+
+<Section class="container">
+  <PH>Welcome to secret santa!</PH>
   <p>
     Have you ever wanted to draw secret santa for everybody
     in your party, without having somebody know who got who?
@@ -10,14 +15,11 @@
     message, that only they will be able to decipher using
     their private key!
   </p>
-</section>
+</Section>
 
 <style>
   p {
     text-indent: 2rem;
     text-align: justify;
-  }
-  h2 {
-    text-align: center;
   }
 </style>

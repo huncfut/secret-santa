@@ -1,6 +1,7 @@
 <script lang="ts">
   import MemberCard from "$lib/components/MemberCard.svelte";
   import Section from "$lib/components/Section.svelte"
+  import PH from "$lib/components/PageHeading.svelte"
 
   // State
   let badSubmit = false
@@ -27,7 +28,7 @@
 
 <!-- HTML -->
 <Section>
-  <h2>Add your party members!</h2>
+  <PH>Add your party members!</PH>
   <form on:submit|preventDefault={addMember}>
     <label>
       Name
@@ -62,9 +63,6 @@
 
 <!-- CSS -->
 <style>
-  h2 {
-    text-align: center;
-  }
   form {
     display: flex;
     flex-direction: column;

@@ -1,13 +1,8 @@
 <script>
   import Section from "$lib/components/Section.svelte";
+  import PH from "$lib/components/PageHeading.svelte";
 </script>
 
 <Section>
-  <h2>Key Generation</h2>
+  <PH>Key Generation</PH>
 </Section>
-
-<style>
-  h2 {
-    text-align: center;
-  }
-</style>
