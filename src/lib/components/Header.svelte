@@ -2,6 +2,7 @@
   import { page } from '$app/stores'
 </script>
 
+<!-- HTML -->
 <header>
   <h1>Secret Santa</h1>
   <nav>
@@ -24,16 +25,12 @@
   </nav>
 </header>
 
+<!-- CSS -->
 <style>
-
   nav {
     display: flex;
     gap: 2.5rem;
   }
-
-  /* nav > * {
-    border: 4px solid firebrick;
-  } */
 
   h1 {
     margin: 1rem 0 0.5rem 0;
@@ -65,11 +62,4 @@
     align-items: center;
     background-color: var(--clr-neutral-100);
   }
-
-  /* header > * {
-    border: 2px solid salmon
-  } */
-
-
-
 </style>

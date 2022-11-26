@@ -78,8 +78,8 @@
     background-color: var(--clr-neutral-100);
     border: 0px;
     border-bottom: 2px solid var(--clr-neutral-300);
-    padding: 0.75rem;
-    padding-bottom: 0;
+    padding-inline: 0.25rem;
+    padding-top: 0.75rem;
     height: 100%;
     transition: border-color 0.2s;
   }

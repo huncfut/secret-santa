@@ -23,6 +23,10 @@ html:focus-within {
   scroll-behavior: smooth;
 }
 
+input {
+  outline: 0;
+}
+
 html,
 body {
   height: 100%;

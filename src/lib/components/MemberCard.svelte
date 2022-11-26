@@ -1,4 +1,5 @@
 <script lang="ts">
+  export let deleteFunc = () => {}
   export let { name, key }: MemberData = {
     name: "",
     key: ""

@@ -28,15 +28,14 @@
   }
 
   footer {
-    display: none;
     padding: 1rem;
+    display: none;
     text-align: right;
-    border: 2px solid red;
     height: 2rem;
+    opacity: 50%;
   }
 
   a {
-    color: var(--clr-primary-900);
-    opacity: 80%;
+    color: var(--clr-primary-900)
   }
 </style>
