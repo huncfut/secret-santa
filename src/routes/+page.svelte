@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
     import PH from "$lib/components/PageHeading.svelte";
     import Section from "$lib/components/Section.svelte";
 </script>

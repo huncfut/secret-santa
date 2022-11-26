@@ -1,8 +1,8 @@
 <script lang="ts">
+  import PH from "$lib/components/PageHeading.svelte"
   import Section from "$lib/components/Section.svelte";
-  import PH from "$lib/components/PageHeading.svelte";
 </script>
 
 <Section>
-  <PH>Key Generation</PH>
+  <PH>Decrypt your message!</PH>
 </Section>
