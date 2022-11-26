@@ -1,7 +1,7 @@
 <script lang="ts">
-  import Member from "$lib/components/Member.svelte";
+  import MemberCard from "$lib/components/MemberCard.svelte";
 
-  let party: { name: string; key: string; }[] = [{
+  let party: MemberData[] = [{
     name: "Kuba",
     key: "97as678fg327ed9"
   }, {
@@ -42,7 +42,7 @@
 <section>
   <members>
     {#each party as member}
-      <Member {...member} />
+      <MemberCard {...member} />
     {/each}
   </members>
 </section>

@@ -7,3 +7,7 @@ declare namespace App {
 	// interface Error {}
 	// interface Platform {}
 }
+interface MemberData {
+	name: string;
+	key: string;
+}

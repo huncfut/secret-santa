@@ -1,6 +1,8 @@
 <script lang="ts">
-  export let name: string
-  export let key: string
+  export let { name, key }: MemberData = {
+    name: "",
+    key: ""
+  };
 </script>
 
 <card>
