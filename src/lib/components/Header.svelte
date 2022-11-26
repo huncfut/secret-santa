@@ -46,8 +46,11 @@
     transition: border-color 0.2s;
     border-bottom: 3px solid var(--clr-neutral-100);
   }
+  a:hover {
+    border-color: var(--clr-neutral-300);
+  }
 
-  .active {
+  a.active {
     border-color: var(--clr-accent-500);
     transition: border-color 0.4s;
   }
