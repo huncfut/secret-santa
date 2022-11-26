@@ -1,6 +1,15 @@
 <script lang="ts">
   import MemberCard from "$lib/components/MemberCard.svelte";
 
+  // State
+  let errors = {
+    name: true,
+    key: false,
+  }
+  let newMember: MemberData = {
+    name: "",
+    key: ""
+  }
   let party: MemberData[] = [{
     name: "Kuba",
     key: "97as678fg327ed9"
@@ -14,21 +23,31 @@
     name: "Jeff",
     key: "dskhasudk"
   }]
+
+  // Form stuff
+  const addMember = (e: SubmitEvent) => {
+    newMember.name !== "" && newMember.key !== "" && console.log(newMember)
+  }
 </script>
 
+<!-- HTML -->
 <section>
   <h2>Add your party members!</h2>
-  <form>
+  <form on:submit|preventDefault={addMember}>
     <label>
       Name
       <input type="text"
         name="name"
+        class:error={errors.name}
+        bind:value={newMember.name}
         />
     </label>
     <label>
       Public Key
       <input type="text"
         name="key"
+        class:error={errors.key}
+        bind:value={newMember.key}
         />
     </label>
     <div>
@@ -38,7 +57,6 @@
     </div>
   </form>
 </section>
-
 <section>
   <members>
     {#each party as member}
@@ -47,6 +65,7 @@
   </members>
 </section>
 
+<!-- CSS -->
 <style>
   h2 {
     text-align: center;
@@ -71,9 +90,16 @@
     height: 100%;
     transition: border-color 0.2s;
   }
-  input:focus {
+  input:focus, input:hover {
     border-color: var(--clr-neutral-500);
   }
+  input.error {
+    border-color: var(--clr-primary-500);
+  }
+  input.error:focus, input.error:hover {
+    border-color: var(--clr-primary-800);
+  }
+
   form > div {
     display: flex;
     justify-content: space-around;
