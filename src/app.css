@@ -1,0 +1,49 @@
+:root {
+  --clr-primary-900: hsl(5.64,63%,35%);
+  --clr-primary-700: hsl(5.64,63%,40%);
+  --clr-primary-500: hsl(5.64,63%,46%);
+  --clr-primary-300: hsl(5.64,63%,60%);
+
+  --clr-accent-500: hsl(145, 63%, 42%);
+  --clr-accent-300: hsl(145, 63%, 52%);
+  --clr-accent-100: hsl(145, 63%, 72%);
+
+  --clr-neutral-50: hsl(192,15%,97%);
+  --clr-neutral-100: hsl(192,15%,96%);
+  --clr-neutral-200: hsl(192,15%,93%);
+  --clr-neutral-300: hsl(192,15%,89%);
+  --clr-neutral-500: hsl(192,15%,80%);
+  --clr-neutral-500: hsl(192,15%,70%);
+
+
+  --ff-primary: "Helvetica", sans-serif;
+
+  --ff-body: var(--ff-primary);
+  --ff-heading: var(--ff-primary);
+
+  font-family: var(--ff-primary);
+}
+
+section {
+  --padding: 1rem;
+  --max-width: 60ch;
+
+  padding: 1rem 0;
+  max-width: min(var(--max-width), 100% - (2 * var(--padding)));
+  margin-inline: auto;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--ff-heading);
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 1rem;
+}
+
+input {
+  outline: 0;
+}
