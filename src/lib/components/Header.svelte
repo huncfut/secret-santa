@@ -6,16 +6,20 @@
   <h1>Secret Santa</h1>
   <nav>
     <a href="/"
-      class:active={$page.url.pathname == '/'}>
+      class:active={$page.url.pathname === '/'}>
       Home
     </a>
+    <a href="/generate-key"
+      class:active={$page.url.pathname === '/generate-key'}>
+      Key
+    </a>
     <a href="/draw"
-      class:active={$page.url.pathname == '/draw'}>
+      class:active={$page.url.pathname === '/draw'}>
       Draw
     </a>
-    <a href="/decipher"
-      class:active={$page.url.pathname == "/decipher"}>
-      Decipher
+    <a href="/decrypt"
+      class:active={$page.url.pathname === "/decrypt"}>
+      Decrypt
     </a>
   </nav>
 </header>
@@ -24,7 +28,7 @@
 
   nav {
     display: flex;
-    gap: 2rem;
+    gap: 2.5rem;
   }
 
   /* nav > * {

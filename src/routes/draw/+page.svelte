@@ -1,5 +1,6 @@
 <script lang="ts">
   import MemberCard from "$lib/components/MemberCard.svelte";
+  import Section from "$lib/components/Section.svelte"
 
   // State
   let badSubmit = false
@@ -11,19 +12,7 @@
     name: "",
     key: ""
   }
-  let party: MemberData[] = [{
-    name: "Kuba",
-    key: "97as678fg327ed9"
-  }, {
-    name: "wwwwwwwwwwwwww",
-    key: "7gy9a687as9"
-  }, {
-    name: "Dupa",
-    key: "dasy98g7iuh3"
-  }, {
-    name: "Jeff",
-    key: "dskhasudk"
-  }]
+  let party: MemberData[] = []
 
   // Form stuff
   const addMember = (e: SubmitEvent) => {
@@ -37,7 +26,7 @@
 </script>
 
 <!-- HTML -->
-<section>
+<Section>
   <h2>Add your party members!</h2>
   <form on:submit|preventDefault={addMember}>
     <label>
@@ -62,14 +51,14 @@
       </button>
     </div>
   </form>
-</section>
-<section>
-  <members>
+</Section>
+<Section>
+  <party>
     {#each party as member}
       <MemberCard {...member} />
     {/each}
-  </members>
-</section>
+  </party>
+</Section>
 
 <!-- CSS -->
 <style>
@@ -122,7 +111,7 @@
     cursor: pointer;
     opacity: 70%;
   }
-  members {
+  party {
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;

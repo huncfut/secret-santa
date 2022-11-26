@@ -6,8 +6,8 @@
 </script>
 
 <card>
-  <span>{name}</span>
-  <span>{key.slice(0, 4)}</span>
+  <h4>{name}</h4>
+  <p>{`${key.slice(0, 4)}...${key.slice(key.length - 5)}`}</p>
 </card>
 
 <style>
@@ -23,5 +23,12 @@
 
     border-radius: 2px;    
     background-color: var(--clr-neutral-300);
+  }
+  h4 {
+    font-size: 2rem;
+  }
+  p {
+    font-family: monospace;
+    opacity: 60%;
   }
 </style>
