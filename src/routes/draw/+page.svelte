@@ -3,6 +3,7 @@
   import Section from "$lib/components/Section.svelte"
   import PH from "$lib/components/PageHeading.svelte"
   import TextInput from "$lib/components/TextInput.svelte";
+  import Form from "$lib/components/Form.svelte"
 
   // State
   let data: MemberData = {
@@ -31,7 +32,7 @@
 <!-- HTML -->
 <Section>
   <PH>Add your party members!</PH>
-  <form on:submit|preventDefault={addMember}>
+  <Form onSubmit={addMember}>
     <TextInput bind:value={data.name}
       name="Name"
       id="name"
@@ -40,12 +41,7 @@
       name="Public Key"
       id="key"
       error={errors.key}/>
-    <div>
-      <button>
-        Submit
-      </button>
-    </div>
-  </form>
+  </Form>
 </Section>
 <Section>
   <party>
@@ -60,27 +56,6 @@
 
 <!-- CSS -->
 <style>
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-  }
-  form > div {
-    display: flex;
-    justify-content: space-around;
-  }
-  button {
-    height: 100%;
-    padding: 0.25rem 1.25rem;
-    background-color: var(--clr-accent-300);
-    border: 1px solid var(--clr-accent-500);
-    border-radius: 4px;
-    transition: opacity 0.15s;
-  }
-  button:hover {
-    cursor: pointer;
-    opacity: 70%;
-  }
   party {
     display: flex;
     flex-wrap: wrap;
