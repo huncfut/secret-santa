@@ -3,7 +3,7 @@
     import Section from "$lib/components/Section.svelte";
 </script>
 
-<Section class="container">
+<Section>
   <PH>Welcome to secret santa!</PH>
   <p>
     Have you ever wanted to draw secret santa for everybody

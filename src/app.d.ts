@@ -11,3 +11,9 @@ interface MemberData {
 	name: string;
 	key: string;
 }
+
+interface TextInputData {
+	name: string;
+	id: string;
+	error: Boolean;
+}
