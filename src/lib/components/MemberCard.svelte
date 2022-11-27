@@ -10,12 +10,12 @@
 </script>
 
 <Card>
-  <h4>{name}</h4>
+  <h1>{name}</h1>
   <p>{shortKey}</p>
 </Card>
 
 <style>
-  h4 {
+  h1 {
     font-size: 2rem;
   }
   p {

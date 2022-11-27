@@ -7,6 +7,7 @@
     flex-wrap: wrap;
     flex-grow: 1;
     align-items: center;
+    gap: 0.5rem;
 
     min-width: 16ch;
     padding: 1rem;
