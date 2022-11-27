@@ -27,6 +27,10 @@
     party = [...party, data]
     data = { name: "", key: "" }
   }
+
+  const draw = () => {
+
+  }
 </script>
 
 <!-- HTML -->
@@ -60,6 +64,19 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
+  }
+  button {
+    padding-inline: 1rem;
+    padding-block: 0.25rem;
+
+    border: 1px solid var(--clr-neutral-500);
+    background-color: var(--clr-neutral-300);
+    border-radius: 4px;
+
+    transition: border-color 0.2s;
+  }
+  button.error {
+    border-color: var(--clr-primary-500);
   }
 
 </style>
